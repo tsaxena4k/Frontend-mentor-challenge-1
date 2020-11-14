@@ -1,0 +1,42 @@
+[
+    {
+        "social_icon": "Facebook",
+        "social_icon_color": "hsl(208, 92%, 53%)",
+        "social_handle": "@tsaxena4k",
+        "data": "1987",
+        "data_text": "FOLLOWERS",
+        "bottom_icon": "Dropup",
+        "bottom_icon_color":"hsl(163,72%,41%)",
+        "bottom_icon_data": "12 Today"
+    },
+    {
+        "social_icon": "Twitter",
+        "social_icon_color": "hsl(203, 89%, 53%)",
+        "social_handle": "@tsaxena4k",
+        "data": "1044",
+        "data_text": "FOLLOWERS",
+        "bottom_icon": "Dropup",
+        "bottom_icon_color":"hsl(163,72%,41%)",
+        "bottom_icon_data": "99 Today"
+    },
+    {
+        "social_icon": "Instagram",
+        "social_icon_color": "RGB(193,53,132)",
+        "social_handle": "@tsaxena4k",
+        "data": "11k",
+        "data_text": "FOLLOWERS",
+        "bottom_icon": "Dropup",
+        "bottom_icon_color":"hsl(163,72%,41%)",
+        "bottom_icon_data": "1099 Today"
+    },
+    {
+        "social_icon": "Youtube",
+        "social_icon_color": "hsl(348, 97%, 39%)",
+        "social_handle": "@tsaxena4k",
+        "data": "8239",
+        "data_text": "SUBSCRIBERS",
+        "bottom_icon": "Dropdown",
+        "bottom_icon_color":"hsl(356, 69%, 56%)",
+        "bottom_icon_data": "144 Today"
+    }
+]

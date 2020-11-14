@@ -1,0 +1,74 @@
+[
+    {
+        "heading": "Page Views",
+        "social_icon": "Facebook",
+        "icon_color": "hsl(208, 92%, 53%)",
+        "bottom_data": "87",
+        "data_percent": "3%",
+        "bottom_icon": "Dropup",
+        "bottm_icon_color": "hsl(163, 72%, 41%)"
+    },
+    {
+        "heading": "Likes",
+        "social_icon": "Facebook",
+        "icon_color": "hsl(208, 92%, 53%)",
+        "bottom_data": "52",
+        "data_percent": "2%",
+        "bottom_icon": "Dropdown",
+        "bottm_icon_color": "hsl(356, 69%, 56%)"
+    },
+    {
+        "heading": "Likes",
+        "social_icon": "Instagram",
+        "icon_color": "RGB(193,53,132)",
+        "bottom_data": "5462",
+        "data_percent": "2257%",
+        "bottom_icon": "Dropup",
+        "bottm_icon_color": "hsl(163, 72%, 41%)"
+    },
+    {
+        "heading": "Profile Views",
+        "social_icon": "Instagram",
+        "icon_color": "RGB(193,53,132)",
+        "bottom_data": "52k",
+        "data_percent": "1375%",
+        "bottom_icon": "Dropup",
+        "bottm_icon_color": "hsl(163, 72%, 41%)"
+    },
+    {
+        "heading": "Retweets",
+        "social_icon": "Twitter",
+        "icon_color": "hsl(203, 89%, 53%)",
+        "bottom_data": "117",
+        "data_percent": "303%",
+        "bottom_icon": "Dropup",
+        "bottm_icon_color": "hsl(163, 72%, 41%)"
+    },
+    {
+        "heading": "Likes",
+        "social_icon": "Twitter",
+        "icon_color": "hsl(203, 89%, 53%)",
+        "bottom_data": "507",
+        "data_percent": "553%",
+        "bottom_icon": "Dropup",
+        "bottm_icon_color": "hsl(163, 72%, 41%)"
+    },
+    {
+        "heading": "Likes",
+        "social_icon": "Youtube",
+        "icon_color": "hsl(348, 97%, 39%)",
+        "bottom_data": "107",
+        "data_percent": "19%",
+        "bottom_icon": "Dropdown",
+        "bottm_icon_color": "hsl(356, 69%, 56%)"
+    },
+    {
+        "heading": "Total Views",
+        "social_icon": "Youtube",
+        "icon_color": "hsl(348, 97%, 39%)",
+        "bottom_data": "1407",
+        "data_percent": "12%",
+        "bottom_icon": "Dropdown",
+        "bottm_icon_color": "hsl(356, 69%, 56%)"
+    }
+]

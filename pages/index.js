@@ -1,209 +1,93 @@
-import Head from 'next/head'
+import { FaTwitter } from 'react-icons/fa'
+import { AiFillFacebook, AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai';
+import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
+import card_2_content from '../utilities/card_2_content.json';
+import card_1_content from '../utilities/card_1_content.json';
 
 export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+  function card_style_1(value) {
+    const { social_icon, social_icon_color, social_handle, data, data_text, bottom_icon, bottom_icon_color, bottom_icon_data } = value;
+    return (
+      <div className="col-sm">
+        <div className="card mb-4 card-style-1" style={{ borderTop: `5px solid ${social_icon_color}` }}>
+          <div className="card-body">
+            <h6 className="card-title"><i className="card-icons mr-2" style={{ color: social_icon_color }}>
+              {social_icon === 'Facebook' ? <AiFillFacebook /> : (social_icon === 'Instagram' ? <AiOutlineInstagram /> : (social_icon === 'Twitter' ? <FaTwitter /> : <AiFillYoutube />))}
+            </i>{social_handle}</h6>
+            <p className="card-text">{data}<h6>{data_text}</h6></p>
+            <a href="#" className="card-link font-weight-bold" style={{ color: bottom_icon_color }}>{bottom_icon == 'Dropup' ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}{bottom_icon_data}</a>
+          </div>
         </div>
-      </main>
+      </div>
+    )
+  }
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+  function card_style_2(value) {
+    const { heading, icon_color, social_icon, bottom_data, bottom_icon, bottm_icon_color, data_percent } = value;
+    return (
+      <div className="col-sm-3 mb-4">
+        <div className="card card-style-2">
+          <div className="card-body">
+            <div className="card-title">
+              <h6>{heading}</h6>
+              <i style={{ color: icon_color }}>
+                {social_icon === 'Facebook' ? <AiFillFacebook /> : (social_icon === 'Instagram' ? <AiOutlineInstagram /> : (social_icon === 'Twitter' ? <FaTwitter /> : <AiFillYoutube />))}
+              </i>
+            </div>
+            <div className="card-bottom">
+              <p className="card-text font-weight-bolder">{bottom_data}</p>
+              <a href="#" className="card-link" style={{ color: bottm_icon_color }}>
+                {bottom_icon == 'Dropup' ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}{data_percent}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+  return (
+    <main>
+      <div className="upper-container"></div>
+      <div className="lower-container">
+        <div className="container">
+          <div className="row header mb-5">
+            <div className="col-sm niche-border">
+              <h2>Social Media Dashboard</h2>
+              <h6>Total Followers:23,004</h6>
+            </div>
+            <div className="col-sm">
+              <label class="switch float-right">
+                <input type="checkbox" onChange={() => document.body.classList.toggle('dark-mode')} />
+                <span class="slider round"></span>
+              </label>
+              <span className="mt-1 mr-3">Drak Mode</span>
+            </div>
+          </div>
+          <div className="row mb-4">
+            {card_1_content.map(value => {
+              return card_style_1(value);
+            })}
+          </div>
+          <div className="row mb-2">
+            <div className="col-12 mb-3">
+              <h3>Overview-Today</h3>
+            </div>
+            {card_2_content.map(value => {
+              return card_style_2(value);
+            })}
+          </div>
+          <div className="row">
+            <div className="col-sm text-center">
+              <div className="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                  Coded by <a href="https://github.com/tsaxena4k" target="_blank">Tushar Saxena</a>.
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   )
 }
