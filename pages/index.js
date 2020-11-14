@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { FaTwitter } from 'react-icons/fa'
 import { AiFillFacebook, AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai';
 import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
@@ -49,10 +48,6 @@ export default function Home() {
   }
 
   return (
-    <>
-      <Head>
-        <meta charset="UTF-8" />
-      </Head>
       <main>
         <div className="upper-container"></div>
         <div className="lower-container">
@@ -94,6 +89,5 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
   )
 }
