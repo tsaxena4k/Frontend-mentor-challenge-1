@@ -15,7 +15,9 @@ export default function Home() {
             <h6 className="card-title"><i className="card-icons mr-2" style={{ color: social_icon_color }}>
               {social_icon === 'Facebook' ? <AiFillFacebook /> : (social_icon === 'Instagram' ? <AiOutlineInstagram /> : (social_icon === 'Twitter' ? <FaTwitter /> : <AiFillYoutube />))}
             </i>{social_handle}</h6>
-            <p className="card-text">{data}<h6>{data_text}</h6></p>
+            <p className="card-text">{data}
+              <h6>{data_text}</h6>
+            </p>
             <a href="#" className="card-link font-weight-bold" style={{ color: bottom_icon_color }}>{bottom_icon == 'Dropup' ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}{bottom_icon_data}</a>
           </div>
         </div>
