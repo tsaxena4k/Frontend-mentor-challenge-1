@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { FaTwitter } from 'react-icons/fa'
 import { AiFillFacebook, AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai';
 import { IoMdArrowDropup, IoMdArrowDropdown } from 'react-icons/io';
@@ -48,46 +49,51 @@ export default function Home() {
   }
 
   return (
-    <main>
-      <div className="upper-container"></div>
-      <div className="lower-container">
-        <div className="container">
-          <div className="row header mb-5">
-            <div className="col-sm niche-border">
-              <h2>Social Media Dashboard</h2>
-              <h6>Total Followers:23,004</h6>
+    <>
+      <Head>
+        <meta charset="UTF-8" />
+      </Head>
+      <main>
+        <div className="upper-container"></div>
+        <div className="lower-container">
+          <div className="container">
+            <div className="row header mb-5">
+              <div className="col-sm niche-border">
+                <h2>Social Media Dashboard</h2>
+                <h6>Total Followers:23,004</h6>
+              </div>
+              <div className="col-sm">
+                <label class="switch float-right">
+                  <input type="checkbox" onChange={() => document.body.classList.toggle('light-mode')} />
+                  <span class="slider round"></span>
+                </label>
+                <span className="mt-1 mr-3">Drak Mode</span>
+              </div>
             </div>
-            <div className="col-sm">
-              <label class="switch float-right">
-                <input type="checkbox" onChange={() => document.body.classList.toggle('light-mode')} />
-                <span class="slider round"></span>
-              </label>
-              <span className="mt-1 mr-3">Drak Mode</span>
+            <div className="row mb-4">
+              {card_1_content.map(value => {
+                return card_style_1(value);
+              })}
             </div>
-          </div>
-          <div className="row mb-4">
-            {card_1_content.map(value => {
-              return card_style_1(value);
-            })}
-          </div>
-          <div className="row mb-2">
-            <div className="col-12 mb-3">
-              <h3>Overview-Today</h3>
+            <div className="row mb-2">
+              <div className="col-12 mb-3">
+                <h3>Overview-Today</h3>
+              </div>
+              {card_2_content.map(value => {
+                return card_style_2(value);
+              })}
             </div>
-            {card_2_content.map(value => {
-              return card_style_2(value);
-            })}
-          </div>
-          <div className="row">
-            <div className="col-sm text-center">
-              <div className="attribution">
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            <div className="row">
+              <div className="col-sm text-center">
+                <div className="attribution">
+                  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
                   Coded by <a href="https://github.com/tsaxena4k" target="_blank">Tushar Saxena</a>.
                 </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
