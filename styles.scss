@@ -1,15 +1,5 @@
 
 :root{
-    --bg-upper-container:#{hsl(225, 100%, 98%)};
-    --bg-lower-container:#{hsl(0, 0%, 100%)};
-    --bg-card:#{hsl(227, 47%, 96%)};
-    --color-main-text:#{hsl(230, 17%, 14%)};
-    --color-sub-text:#{hsl(228, 12%, 44%)};
-    --bg-toggle-btn:#{hsl(230, 22%, 74%)};
-    --color-header-text:#{hsl(228, 12%, 44%)};
-}
-
-.dark-mode{
     --bg-upper-container:#{hsl(232, 19%, 15%)};
     --bg-lower-container:#{ hsl(230, 17%, 14%)};
     --bg-card:#{hsl(228, 28%, 20%)};
@@ -17,6 +7,16 @@
     --color-sub-text:#{hsl(228, 34%, 66%)};
     --bg-toggle-btn:#{linear-gradient(90deg, rgba(55,143,230,1) 0%, rgba(62,218,130,1) 100%)};
     --color-header-text:#{hsl(0, 0%, 100%)};
+}
+
+.light-mode{
+    --bg-upper-container:#{hsl(225, 100%, 98%)};
+    --bg-lower-container:#{hsl(0, 0%, 100%)};
+    --bg-card:#{hsl(227, 47%, 96%)};
+    --color-main-text:#{hsl(230, 17%, 14%)};
+    --color-sub-text:#{hsl(228, 12%, 44%)};
+    --bg-toggle-btn:#{hsl(230, 22%, 74%)};
+    --color-header-text:#{hsl(228, 12%, 44%)};
 }
 
 body{
