@@ -62,7 +62,7 @@ export default function Home() {
                 <input type="checkbox" onChange={() => document.body.classList.toggle('light-mode')} />
                 <span class="slider round"></span>
               </label>
-              <span className="mt-1 mr-3">Drak Mode</span>
+              <span className="mt-1 mr-3">Dark Mode</span>
             </div>
           </div>
           <div className="row mb-4">
