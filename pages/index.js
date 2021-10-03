@@ -8,6 +8,7 @@ export default function Home() {
 
   function card_style_1(value) {
     const { social_icon, social_icon_color, social_handle, data, data_text, bottom_icon, bottom_icon_color, bottom_icon_data } = value;
+    let fd=2;
     return (
       <div className="col-sm">
         <div className="card mb-4 card-style-1" style={{ borderTop: `5px solid ${social_icon_color}` }}>
